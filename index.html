@@ -11,27 +11,26 @@
 
 <body>
     <div class="header-container mt-5">
-        <form action="" id="myForm">
+        <div class="header__content">
             <label for="amount_of_cards">Original:</label>
             <input type="text" id="amount_of_cards">
-            <button type="submit" class="btn--draw">Draw</button>
-            <button type="submit" class="btn--sort">Sort</button>
+            <button class="btn--draw">Draw</button>
+            <button class="btn--sort">Sort</button>
             <div class="cards-container">
                 <!-- Generate n of cards by input.value -->
                 <!-- <div class="card">
-                    <span class="suit-top"></span>
-                    <span class="number"></span>
-                    <span class="suit suit--bottom color--red"></span>
+                    <span class="suit suit--top">${card.suit}</span>
+                    <span class="number">${card.num}</span>
+                    <span class="suit suit--bottom color--red">${card.suit}</span>
                 </div> -->
             </div>
-            <div class="sort-content mt-5">
+            <div class="sort-container mt-5">
                 <p class="log__header">Select sort log:</p>
                 <div class="cards-sorted-container">
                     <!-- Carts sorted -->
                 </div>
             </div>
-        </form>
-
+        </div>
     </div>
 
 

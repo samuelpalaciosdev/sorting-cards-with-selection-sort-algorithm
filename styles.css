@@ -51,8 +51,9 @@ body {
 
 /*container-number*/
 .number {
+  margin: 10% 0% 20% 0%;
   text-align: center;
-  margin: 0 auto;
+  color: black;
 }
 
 .cards-container-row {
