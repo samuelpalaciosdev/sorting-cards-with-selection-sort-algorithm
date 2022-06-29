@@ -1,3 +1,3 @@
-# Sorting Pocker Cards With Bubble Sort
+# Sorting Pocker Cards With Selection Sort
 
-Game that let you decide how many cards do you want, and then if you want, you can sort them and see the steps of the selection sort algorithm.
+Game that let you decide how many cards do you want, and then if you want, you can sort them and see the steps of the selection sort algorithm. 😀
