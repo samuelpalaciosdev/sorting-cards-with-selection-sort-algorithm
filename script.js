@@ -37,7 +37,6 @@ const generateCardsArray = (numCards) => {
     card.suit = suitsCards[getRandomNum(0, suitsCards.length - 1)];
     card.num = numsCards[getRandomNum(0, numsCards.length - 1)];
     cardsArr.push(card);
-    console.log(card);
   }
   return cardsArr;
 };
@@ -73,21 +72,26 @@ const addCards = (cardsArr, sort, iterationNum) => {
   }
 };
 
-// Bubble sort
+// Selection sort
 
-const bubbleSort = (cardsArr) => {
+const selectionSort = (cardsArr) => {
   let newCardsArr = [...cardsArr];
   let iterationNum = -1;
 
   for (let i = 0; i < newCardsArr.length; i++) {
-    for (let j = 0; j < newCardsArr.length - i - 1; j++) {
-      if (numsCards.indexOf(newCardsArr[j].num) > numsCards.indexOf(newCardsArr[j + 1].num)) {
-        const lesser = newCardsArr[j + 1];
-        newCardsArr[j + 1] = newCardsArr[j];
-        newCardsArr[j] = lesser;
-        iterationNum++;
-        addCards(newCardsArr, true, iterationNum);
+    let indexOfMin = i;
+    for (let j = i + 1; j < newCardsArr.length; j++) {
+      if (numsCards.indexOf(newCardsArr[j].num) < numsCards.indexOf(newCardsArr[indexOfMin].num)) {
+        indexOfMin = j;
       }
+    }
+
+    if (indexOfMin !== i) {
+      const lesser = newCardsArr[indexOfMin];
+      newCardsArr[indexOfMin] = newCardsArr[i];
+      newCardsArr[i] = lesser;
+      iterationNum++;
+      addCards(newCardsArr, true, iterationNum);
     }
   }
 
@@ -107,7 +111,6 @@ btnDraw.addEventListener('click', () => {
 });
 
 btnSort.addEventListener('click', () => {
-  console.log('hey whatsup its me');
   clearSortedContainer();
-  bubbleSort(cardsArr);
+  selectionSort(cardsArr);
 });
