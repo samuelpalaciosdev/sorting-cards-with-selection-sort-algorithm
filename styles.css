@@ -49,9 +49,8 @@ body {
   transform: rotate(180deg);
 }
 
-/*container-number*/
 .number {
-  margin: 10% 0% 20% 0%;
+  margin: 20% 0%;
   text-align: center;
   color: black;
 }
